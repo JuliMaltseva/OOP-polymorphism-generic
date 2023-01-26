@@ -2,24 +2,23 @@ package transport;
 
 import java.util.Objects;
 
-import static transport.ValidateParameters.validateTransportParameters;
+import static transport.ValidateParameters.validateParameters;
 
-public abstract class Transport {
+public abstract class Transport implements Competing {
 
-    public final String brand;
-    public final String model;
-    public double engineVolume;
+    private final String brand;
+    private final String model;
+    private double engineVolume;
 
     public Transport(String brand, String model, double engineVolume) {
-        this.brand = validateTransportParameters(brand);
-        this.model = validateTransportParameters(model);
+        this.brand = validateParameters(brand);
+        this.model = validateParameters(model);
         this.engineVolume = validateEngineVolume(engineVolume);
     }
 
     public double validateEngineVolume(double value) {
         return value <= 0 ? 1.5 : value;
     }
-
 
     public String getBrand() {
         return brand;
@@ -56,9 +55,9 @@ public abstract class Transport {
                 engineVolume + " л.";
     }
 
-    abstract void start ();
+    abstract void start();
 
-    abstract void finish ();
+    abstract void finish();
 
 
 }

@@ -5,7 +5,7 @@ public class ValidateParameters {
         return (value == null || value.isBlank() || value.isEmpty()) ? defaultValue : value;
     }
 
-    public static String validateTransportParameters(String value) {
+    public static String validateParameters(String value) {
         return validateString(value, "default");
     }
 }

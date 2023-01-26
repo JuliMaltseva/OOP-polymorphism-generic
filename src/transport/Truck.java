@@ -13,11 +13,26 @@ public class Truck extends Transport{
 
     @Override
     public void start() {
-        System.out.println("начать движение");
+        System.out.println("Truck " + getBrand() + " " + getModel() + " started");
     }
 
     @Override
     public void finish() {
-        System.out.println("закончить движение");
+        System.out.println("Truck " + getBrand() + " " + getModel() + " finished");
+    }
+
+    @Override
+    public void pitStop() {
+        System.out.println("Truck " + getBrand() + " " + getModel() + " at the pitstop");
+    }
+
+    @Override
+    public void theBestRacingLapTime() {
+        System.out.println("The best racing lap time for truck " + getBrand() + " " + getModel() + ":");
+    }
+
+    @Override
+    public void maxSpeed() {
+        System.out.println("The max speed for bus " + getBrand() + " " + getModel() + ":");
     }
 }

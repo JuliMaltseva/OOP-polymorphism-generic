@@ -14,11 +14,26 @@ public class Bus extends Transport {
 
     @Override
     public void start() {
-        System.out.println("начать движение");
+        System.out.println("Bas " + getBrand() + " " + getModel() + " started");
     }
 
     @Override
     public void finish() {
-        System.out.println("закончить движение");
+        System.out.println("Bas " + getBrand() + " " + getModel() + " finished");
+    }
+
+    @Override
+    public void pitStop() {
+        System.out.println("Bus " + getBrand() + " " + getModel() + " at the pitstop");
+    }
+
+    @Override
+    public void theBestRacingLapTime() {
+        System.out.println("The best racing lap time for bus " + getBrand() + " " + getModel() + ":");
+    }
+
+    @Override
+    public void maxSpeed() {
+        System.out.println("The max speed for bus " + getBrand() + " " + getModel() + ":");
     }
 }
