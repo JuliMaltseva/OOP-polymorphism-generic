@@ -1,11 +1,12 @@
 package transport;
 
 public class Car extends Transport {
+    static Type typeCar;
 
-    public Car(String brand, String model, double engineVolume) {
+    public Car(String brand, String model, double engineVolume, Type type) {
         super(brand, model, engineVolume);
+        typeCar = type;
     }
-
 
     @Override
     public void start() {
@@ -32,7 +33,13 @@ public class Car extends Transport {
         System.out.println("The max speed for car " + getBrand() + " " + getModel() + ":");
     }
 
+    @Override
+    public String toString() {
+        return brand + " " + model + ", " + "объем двигателя - " +
+                engineVolume + " л." + "Тип кузова: " + typeCar;
+    }
+
+
+
 
 }
-
-

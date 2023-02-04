@@ -1,13 +1,14 @@
 package transport;
+
 public class CarAssortment {
     public static Car[] car = new Car[5];
 
     {
-        car[0] = new Car("Lada", "Granta", 1.7);
-        car[1] = new Car("Audi", "A8 50 L TDI quattro", 3.0);
-        car[2] = new Car("BMW", "Z8", 3.0);
-        car[3] = new Car("Kia", "Sportage 4-го поколения", 2.4);
-        car[4] = new Car("Hyundai", "Avante", 1.6);
+        car[0] = new Car("Lada", "Granta", 1.7, Type.HATCHBACK);
+        car[1] = new Car("Audi", "A8 50 L TDI quattro", 3.0, Type.SEDAN);
+        car[2] = new Car("BMW", "Z8", 3.0, Type.COUPE);
+        car[3] = new Car("Kia", "Sportage 4-го поколения", 2.4, Type.SUV);
+        car[4] = new Car("Hyundai", "Avante", 1.6, Type.SEDAN);
     }
 
     //Вывести в консоль данные о каждом автомобиле с перечислением всех их характеристик.
@@ -46,8 +47,6 @@ public class CarAssortment {
             car.maxSpeed();
         }
     }
-
-
 
 
 }

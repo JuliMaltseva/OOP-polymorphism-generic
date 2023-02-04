@@ -1,5 +1,7 @@
 package transport;
+
 import transport.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -14,6 +16,7 @@ public class Main {
 
         System.out.println();
 
+        /*
         carAssortment.printAllCarStart();
         busAssortment.printAllBusStart();
         truckAssortment.printAllTruckStart();
@@ -41,8 +44,39 @@ public class Main {
         truckAssortment.printAllTruckPitStop();
         truckAssortment.printAllTruckTheBestRacingLapTime();
         truckAssortment.printAllTruckTheMaxSpeed();
-
+        */
         System.out.println();
+
+        switch (Car.typeCar) {
+            case SEDAN:
+                System.out.println("Седан");
+                break;
+            case HATCHBACK:
+                System.out.println("Хетчбэк");
+                break;
+            case COUPE:
+                System.out.println("Купе");
+                break;
+            case STATION_WAGON:
+                System.out.println("Универсал");
+                break;
+            case SUV:
+                System.out.println("Внедорожник");
+                break;
+            case CROSSOVER:
+                System.out.println("Кроссовер");
+                break;
+            case PICKUP:
+                System.out.println("Пикап");
+                break;
+            case VAN:
+                System.out.println("Фургон");
+                break;
+            case MINIVAN:
+                System.out.println("Минивэн");
+                break;
+        }
+
 
     }
 

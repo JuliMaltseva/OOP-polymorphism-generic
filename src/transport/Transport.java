@@ -6,9 +6,9 @@ import static transport.ValidateParameters.validateParameters;
 
 public abstract class Transport implements Competing {
 
-    private final String brand;
-    private final String model;
-    private double engineVolume;
+    public final String brand;
+    public final String model;
+    public double engineVolume;
 
     public Transport(String brand, String model, double engineVolume) {
         this.brand = validateParameters(brand);
